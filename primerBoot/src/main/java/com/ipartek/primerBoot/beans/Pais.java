@@ -4,19 +4,7 @@ package com.ipartek.primerBoot.beans;
 
 public class Pais {
 
-	private String nombre;
-	
-	
-//	public Pais() {
-//		
-//	}
-//
-//	public Pais(String nombre) {
-//		super();
-//		this.nombre = nombre;
-//	}
-
-	
+	private String nombre;	
 
 	public String getNombre() {
 		return nombre;

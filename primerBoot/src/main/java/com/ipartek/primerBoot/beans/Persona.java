@@ -7,18 +7,6 @@ public class Persona {
 	private String apodo;
 	private Pais pais;
 	private Ciudad ciudad;
-	
-//	public Persona() {
-//		
-//	}
-//	
-//	public Persona(int id, String nombre, String apodo, Pais pais) {
-//		super();
-//		this.id = id;
-//		this.nombre = nombre;
-//		this.apodo = apodo;
-//		this.pais = pais;
-//	}
 
 	public Ciudad getCiudad() {
 		return ciudad;
