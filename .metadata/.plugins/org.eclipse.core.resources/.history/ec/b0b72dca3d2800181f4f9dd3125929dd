@@ -1,0 +1,16 @@
+package com.ipartek.primerBoot.beans;
+
+public class Pais {
+
+	private String nombr;
+
+	public String getNombr() {
+		return nombr;
+	}
+
+	public void setNombr(String nombr) {
+		this.nombr = nombr;
+	}
+	
+	
+}

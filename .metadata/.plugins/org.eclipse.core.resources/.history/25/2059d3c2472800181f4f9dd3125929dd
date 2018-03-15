@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="persona" class="com.ipartek.primerBoot.beans.Persona">
+		<property name="pais" ref="pais"></property>
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Jaime"></property>
+		<property name="apodo" value="Jaimito"></property>
+	</bean>
+
+	<bean id="pais" class="com.ipartek.primerBoot.beans.Pais">
+		<property name="nombre" value="Mi casa"></property>
+		<property name="ciudades">
+			<list>
+				<ref bean="ciudad1"></ref>
+				<ref bean="ciudad2"></ref>
+				<ref bean="ciudad3"></ref>
+		</property>
+	</list>
+	</bean>
+
+	<bean id="ciudad1" class="com.ipartek.primerBoot.beans.Ciudad">
+		<property name="nombre" value="La de ahi"></property>
+	</bean>
+	<bean id="ciudad2" class="com.ipartek.primerBoot.beans.Ciudad">
+		<property name="nombre" value="La de aqui"></property>
+	</bean>
+	<bean id="ciudad3" class="com.ipartek.primerBoot.beans.Ciudad">
+		<property name="nombre" value="La de alli"></property>
+	</bean>
+
+</beans>

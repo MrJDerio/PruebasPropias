@@ -1,0 +1,6 @@
+package com.ipartek.primerBoot.beans;
+
+public class Mundo {
+
+	private String saludo;
+}
