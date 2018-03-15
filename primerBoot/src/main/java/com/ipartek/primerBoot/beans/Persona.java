@@ -1,12 +1,27 @@
 package com.ipartek.primerBoot.beans;
 
-public class Persona {
+
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Persona implements InitializingBean, DisposableBean {
 
 	private int id;
 	private String nombre;
 	private String apodo;
 	private Pais pais;
 	private Ciudad ciudad;
+	
+	
+	/*@PostConstruct
+	private void initBean() {
+		System.out.println("Antes de inicializar el bean");
+	}
+	@PreDestroy
+	private void destroyBean() {
+		System.out.println("Bean a punto de ser destruido");
+	}*/
 
 	public Ciudad getCiudad() {
 		return ciudad;
@@ -37,6 +52,16 @@ public class Persona {
 	}
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
+	}
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Antes de inicializar el Bean");
+		
+	}
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Bean a punto de ser Destruido");
+		
 	}
 	
 	
