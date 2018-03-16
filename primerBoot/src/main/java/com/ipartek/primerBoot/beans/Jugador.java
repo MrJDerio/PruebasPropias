@@ -3,9 +3,10 @@ package com.ipartek.primerBoot.beans;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
 
 import com.ipartek.primerBoot.Interfaces.IEquipo;
-
+@Component
 public class Jugador {
 
 	private int numero;
