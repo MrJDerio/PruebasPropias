@@ -5,8 +5,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 //import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.ipartek.primerBoot.beans.Ciudad;
-import com.ipartek.primerBoot.beans.Persona;
+import com.ipartek.primerBoot.Interfaces.IEquipo;
+import com.ipartek.primerBoot.beans.Barcelona;
+//import com.ipartek.primerBoot.beans.Ciudad;
+import com.ipartek.primerBoot.beans.Jugador;
+//import com.ipartek.primerBoot.beans.Persona;
 
 public class App {
 
@@ -14,15 +17,13 @@ public class App {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("/xml/beans.xml");
 		
-		Persona per = (Persona) appContext.getBean("persona");
+		//Jugador jug = (Jugador) appContext.getBean("messi");
 		
-		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
+		//System.out.println(jug.getNombre() + " - " + jug.getEquipo().mostrar());
 		
-		
-		
-		System.out.println(per.getApodo());
-		System.out.println(ciu.getNombre());
+		Jugador jug = (Jugador) appContext.getBean("messi");
 
+		System.out.println(jug.getNombre() + " " +jug.getEquipo().mostrar());
 		((ConfigurableApplicationContext)appContext).close();
 	}
 
