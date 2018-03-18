@@ -2,24 +2,27 @@ package com.ipartek.primerBoot.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.ipartek.primerBoot.Interfaces.IEquipo;
+
 @Component
 public class Jugador {
-
-	private int numero;
+	
+	private int id;
+	@Value("Janai")
 	private String nombre;
 	@Autowired
-	@Qualifier("barcelonaQualifier")
+	@Qualifier("pepe")
 	private IEquipo equipo;
-	
-	public int getNumero() {
-		return numero;
+	@Autowired
+	private Camiseta camiseta;
+	public int getId() {
+		return id;
 	}
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -30,9 +33,15 @@ public class Jugador {
 	public IEquipo getEquipo() {
 		return equipo;
 	}
-	//@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
+	public Camiseta getCamiseta() {
+		return camiseta;
+	}
+	public void setCamiseta(Camiseta camiseta) {
+		this.camiseta = camiseta;
+	}
+	
 	
 }

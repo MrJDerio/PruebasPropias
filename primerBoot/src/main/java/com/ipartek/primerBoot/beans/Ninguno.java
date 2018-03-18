@@ -1,17 +1,12 @@
 package com.ipartek.primerBoot.beans;
 
-import org.springframework.stereotype.Component;
-
-
 import com.ipartek.primerBoot.Interfaces.IEquipo;
 
-@Component
-public class Barcelona implements IEquipo{
+public class Ninguno implements IEquipo{
 
 	@Override
 	public String mostrar() {
-		return "Barcelona FC";
+		return "Athletic";
 	}
 
-	
 }
